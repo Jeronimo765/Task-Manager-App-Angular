@@ -1,0 +1,19 @@
+<h2>Lista de Tareas</h2>
+
+<div *ngFor="let task of tasks">
+
+    <h3 [style.color]="task.priority === 'Alta' ? 'red' :task.priority === 'Media' ? 'orange' : 'green'">
+
+        {{ task.title }}
+    </h3>
+
+    <p>{{ task.description }}</p>
+
+    <p *ngIf="task.completed">
+        completada
+    </p>
+
+    <button (click)="onComplete(task.id)"></button>
+
+    <button (click)="onDelete(task.id)"></button>
+</div>

@@ -1,0 +1,15 @@
+<h2>Agregar Tarea</h2>
+
+<input type="text" placeholder="Título" [(ngModel)]="title" />
+
+<textarea placeholder="Descripción" [(ngModel)]="description"> </textarea>
+
+<select [(ngModel)]="priority">
+    <option value="Alta">Alta</option>
+    <option value="Media">Media</option>
+    <option value="Baja">Baja</option>
+</select>
+
+<button (click)="addTask()">
+    Agregar Tarea
+</button>
