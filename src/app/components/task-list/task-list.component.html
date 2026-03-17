@@ -9,9 +9,9 @@
 
     <p>{{ task.description }}</p>
 
-    <p *ngIf="task.completed">
-        completada
-    </p>
+    <p>Prioridad: {{ task.priority }}</p>
+
+    <p *ngIf="task.completed">Completada</p>
 
     <button (click)="onComplete(task.id)"></button>
 

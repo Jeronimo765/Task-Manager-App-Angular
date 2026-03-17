@@ -4,7 +4,7 @@ import { Task } from './models/task.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']   
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
@@ -22,21 +22,21 @@ export class AppComponent {
 
     const task = this.tasks.find(t => t.id === id);
 
-    if(task){
+    if (task) {
       task.completed = true;
     }
 
   }
 
-  totalTasks(){
+  totalTasks() {
     return this.tasks.length;
   }
 
-  completedTasks(){
+  completedTasks() {
     return this.tasks.filter(t => t.completed).length;
   }
 
-  pendingTasks(){
+  pendingTasks() {
     return this.tasks.filter(t => !t.completed).length;
   }
 
